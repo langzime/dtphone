@@ -13,7 +13,6 @@ import com.sinosoft.dtphone.rule.domain1.Page;
 import com.sinosoft.dtphone.rule.domain1.RuleBean;
 import com.sinosoft.dtphone.rule.domain1.SubEvent;
 
-
 public class testJson1 {
 	private static JsonGenerator jsonGenerator = null;
 	private static ObjectMapper objectMapper = null;
@@ -39,39 +38,51 @@ public class testJson1 {
 	}
 
 	public static RuleBean getTB() {
-		RuleBean rb=new RuleBean();
-		Page page1=new Page();
+		RuleBean rb = new RuleBean();
+		Page page1 = new Page();
 		page1.setPageNo("1");
-		Group group=new Group();
+		Group group = new Group();
 		group.setGroupName("");
-		Element element=new Element();
+		Element element = new Element();
 		element.setId("");
 		element.setType("textbox");
 		element.setValue("");
 		element.setLabel("车牌号");
-		Condition conditon=new Condition();
+		Condition conditon = new Condition();
 		conditon.setAllowEmpty("false");
 		conditon.setChecked("true");
 		conditon.setDisPlay("true");
 		conditon.setMaxLength("6");
 		conditon.setReadOnly("false");
 		conditon.setUpper("true");
-		Event event=new Event();
-		event.setAction("checked");
-		SubEvent subEvent=new SubEvent();
-		subEvent.setTargetIds("");
-		subEvent.setTargetAttr("");
-		subEvent.setTargetVal("");
+		{
+			Event event = new Event();
+			event.setAction("checked");
+			{
+				SubEvent subEvent = new SubEvent();
+				subEvent.setTargetIds("AppliMobile,AppliEmail");
+				subEvent.setTargetAttr("display");
+				subEvent.setTargetVal("true");
+				event.add(subEvent);
+			}
+			{
+				SubEvent subEvent = new SubEvent();
+				subEvent.setTargetIds("LicenseNo");
+				subEvent.setTargetAttr("value");
+				subEvent.setTargetVal("京*");//相当于append
+				event.add(subEvent);
+			}
+			conditon.addEvent(event);
+		}
 		element.setCondition(conditon);
 		group.add(element);
 		page1.add(group);
 		rb.add(page1);
-		Page page2=new Page();
-		Page page3=new Page();
-		Page page4=new Page();
-		
+		Page page2 = new Page();
+		Page page3 = new Page();
+		Page page4 = new Page();
+
 		return rb;
 	}
 
 }
-
