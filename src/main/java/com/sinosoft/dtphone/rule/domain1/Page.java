@@ -6,7 +6,9 @@ import java.util.List;
 public class Page {
 	String pageNo="";
 	List<Group> groups=new ArrayList<Group>();
-
+	public void add(Group group){
+		this.groups.add(group);
+	}
 	public List<Group> getGroups() {
 		return groups;
 	}

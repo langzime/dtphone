@@ -9,6 +9,9 @@ public class RuleBean {
 	String errorMsg="";//错误信息
 	String elementNum="";//节点个数
 	List<Page> pages=new ArrayList<Page>();
+	public void add(Page page){
+		this.pages.add(page);
+	}
 	public String getStatus() {
 		return status;
 	}

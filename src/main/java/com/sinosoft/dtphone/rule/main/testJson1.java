@@ -62,6 +62,10 @@ public class testJson1 {
 		subEvent.setTargetIds("");
 		subEvent.setTargetAttr("");
 		subEvent.setTargetVal("");
+		element.setCondition(conditon);
+		group.add(element);
+		page1.add(group);
+		rb.add(page1);
 		Page page2=new Page();
 		Page page3=new Page();
 		Page page4=new Page();

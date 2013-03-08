@@ -6,6 +6,9 @@ import java.util.List;
 public class Group {
 	String groupName="";
 	List<Element> groups=new ArrayList<Element>();
+	public void add(Element element){
+		this.groups.add(element);
+	}
 	public String getGroupName() {
 		return groupName;
 	}

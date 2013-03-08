@@ -7,6 +7,7 @@ public class Date {
 	String maxDate="";//最大时间
 	String haveSubHour="";//是否有选择小时
 	String subHourId="";//
+	String subInterval="";//字时间时间间隔
 	public String getIsDate() {
 		return isDate;
 	}
@@ -42,5 +43,11 @@ public class Date {
 	}
 	public void setMaxDate(String maxDate) {
 		this.maxDate = maxDate;
+	}
+	public String getSubInterval() {
+		return subInterval;
+	}
+	public void setSubInterval(String subInterval) {
+		this.subInterval = subInterval;
 	}
 }
