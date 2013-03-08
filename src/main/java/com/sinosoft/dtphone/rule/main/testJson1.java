@@ -39,6 +39,9 @@ public class testJson1 {
 
 	public static RuleBean getTB() {
 		RuleBean rb = new RuleBean();
+		rb.setErrorCode("001");
+		rb.setStatus("1");
+		rb.setErrorMsg("返回成功");
 		Page page1 = new Page();
 		page1.setPageNo("1");
 		Group group = new Group();

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Group {
 	String groupName="";
-	List<Element> groups=new ArrayList<Element>();
+	List<Element> elements=new ArrayList<Element>();
 	public void add(Element element){
-		this.groups.add(element);
+		this.elements.add(element);
 	}
 	public String getGroupName() {
 		return groupName;
@@ -15,10 +15,10 @@ public class Group {
 	public void setGroupName(String groupName) {
 		this.groupName = groupName;
 	}
-	public List<Element> getGroups() {
-		return groups;
+	public List<Element> getElements() {
+		return elements;
 	}
-	public void setGroups(List<Element> groups) {
-		this.groups = groups;
+	public void setElements(List<Element> elements) {
+		this.elements = elements;
 	}
 }

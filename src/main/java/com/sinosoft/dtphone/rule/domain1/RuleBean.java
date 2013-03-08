@@ -7,7 +7,6 @@ public class RuleBean {
 	String status="";//状态
 	String errorCode="";//错误代码
 	String errorMsg="";//错误信息
-	String elementNum="";//节点个数
 	List<Page> pages=new ArrayList<Page>();
 	public void add(Page page){
 		this.pages.add(page);
@@ -29,12 +28,6 @@ public class RuleBean {
 	}
 	public void setErrorMsg(String errorMsg) {
 		this.errorMsg = errorMsg;
-	}
-	public String getElementNum() {
-		return elementNum;
-	}
-	public void setElementNum(String elementNum) {
-		this.elementNum = elementNum;
 	}
 	public List<Page> getPages() {
 		return pages;
