@@ -1,7 +1,15 @@
-package com.sinosoft.dtphone.rule.domain1;
+package com.sinosoft.dtphone.citySelected.domain;
 
-public class RuleBean {
+public class Domain {
+	/**
+	 * head节点
+	 * 存放公共信息
+	 */
 	Head head=new Head();
+	/**
+	 * body节点
+	 * 存放私有信息
+	 */
 	Body body=new Body();
 	public Head getHead() {
 		return head;

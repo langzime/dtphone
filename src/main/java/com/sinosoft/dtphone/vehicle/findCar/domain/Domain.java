@@ -1,6 +1,6 @@
-package com.sinosoft.dtphone.rule.domain1;
+package com.sinosoft.dtphone.vehicle.findCar.domain;
 
-public class RuleBean {
+public class Domain {
 	Head head=new Head();
 	Body body=new Body();
 	public Head getHead() {
